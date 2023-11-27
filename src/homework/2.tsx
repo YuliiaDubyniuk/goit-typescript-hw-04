@@ -5,11 +5,9 @@ const initialState: State = {
   requestStep: 'idle',
 };
 
-type RequestStep = string;
-
 type State = {
   isRequestInProgress: boolean;
-  requestStep: RequestStep;
+  requestStep:  "idle" | "finished" | "pending" | "start";
 }
 
 type Action =
